@@ -189,7 +189,7 @@ return require('@embroider/compat').compatBuild(app, Webpack, {
 
 We cannot delete this directory or file and we cannot import from this directory so for all intents and purposes this directory does not exist.
 
-Hopefully we can delete one day.
+Hopefully we can delete it one day.
 
 ### New `./assets` directory
 
@@ -369,6 +369,6 @@ declare module '*.css' {
 
 ## Next Steps
 
-You can now customise your PostCSS and Tailwind configs, add your own PostCSS addons and make it work for you and your team.
+You can now customize your PostCSS and Tailwind configs, add your own PostCSS addons and make it work for you and your team.
 
 Once you have your CSS modernized I would suggest managing your images and fonts in a similar way. That will be my next article, using webpack's `asset/loader` for fonts and `responsive-image-loader` to generate responsive images from a single image import.
