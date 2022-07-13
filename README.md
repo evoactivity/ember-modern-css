@@ -104,7 +104,7 @@ We need to tell eslint these are node files, open `.eslintrc.js`
 
 Assuming you already have embroider installed and fully compatible we need to update the webpack config. Open `ember-cli-build.js`
 
-Near the bottom your should have your embroider config
+Near the bottom you should have your embroider config
 
 ```js
 return require('@embroider/compat').compatBuild(app, Webpack, {
