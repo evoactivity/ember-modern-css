@@ -371,4 +371,4 @@ declare module '*.css' {
 
 You can now customize your PostCSS and Tailwind configs, add your own PostCSS addons and make it work for you and your team.
 
-Once you have your CSS modernized I would suggest managing your images and fonts in a similar way. That will be my next article, using webpack's `asset/loader` for fonts and `responsive-image-loader` to generate responsive images from a single image import.
+Once you have your CSS modernized I would suggest managing your images and fonts in a similar way. That will be my next article, using webpack's `asset/loader` for fonts and `responsive-loader` to generate responsive images from a single image import.
