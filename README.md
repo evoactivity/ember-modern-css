@@ -8,13 +8,17 @@ This guide will not go over enabling embroider in your application, I will be us
 
 An example app is available at https://github.com/evoactivity/ember-modern-css
 
+## Goal
+
+An ember app using tailwind with livereload and full tailwind JIT compatibility. This will be achieved with webpack's `postcss-loader` addon, opening up the rest of the postcss ecosystem.
+
 ## Benefits
 
-Using webpack to bundle our CSS opens up Ember app's to the rest of the CSS ecosystem, we no longer need to reach for the addons mentioned above or write our own addons for dealing with the ember-cli CSS pipeline. We just ignore the legacy CSS pipeline and by doing so we get some easy wins.
+Using webpack to bundle our CSS opens up our Ember app to the rest of the CSS ecosystem. We no longer need to reach for the addons mentioned above or write our own addons for dealing with the ember-cli CSS pipeline. We just ignore the legacy CSS pipeline and by doing so we get some easy wins.
 
 1. Route split, lazy loading CSS
-2. CSS Modules out the box
-3. If a webpack addon exists you can use it
+2. CSS Modules out of the box
+3. If a webpack addon exists you can use it (more on this in future articles)
 
 ## Dependencies
 
@@ -187,18 +191,18 @@ We cannot delete this directory or file and we cannot import from this directory
 
 Hopefully we can delete one day.
 
-### New `./resources` directory
+### New `./assets` directory
 
 Since we have limitations on our `./styles` directory this will be where our entrypoint CSS is going to be created.
 
 ```bash
-mkdir -p app/resources && touch app/resources/styles.css
+mkdir -p app/assets && touch app/assets/styles.css
 ```
 
 Let's add our tailwind styles
 
 ```css
-/* ./resources/styles.css */
+/* ./app/assets/styles.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -214,7 +218,7 @@ import Resolver from 'ember-resolver';
 import loadInitializers from 'ember-load-initializers';
 import config from 'ember-modern-css/config/environment';
 // import our applications style entrypoint
-import './resources/styles.css';
+import './assets/styles.css';
 
 export default class App extends Application {
   modulePrefix = config.modulePrefix;
