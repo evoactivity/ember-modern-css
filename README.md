@@ -1,6 +1,6 @@
 # Ember + Modern CSS
 
-Forget everything you know about CSS + Ember. If you use any of the following `ember-postcss`, `ember-css-modules`, `ember-component-css` then this guide is for you.
+Forget everything you know about CSS + Ember. If you use any of the following `ember-cli-postcss`, `ember-css-modules`, `ember-component-css` then this guide is for you.
 
 Together we are going to take an embroider enabled Ember app and configure a webpack pipeline for our application's CSS using PostCSS and tailwind.
 
