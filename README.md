@@ -173,6 +173,19 @@ return require('@embroider/compat').compatBuild(app, Webpack, {
               },
             ],
           },
+          {
+            test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg)$/,
+            use: [
+              {
+                // include a image/font standard loader for certain
+                // Tailwind/CSS features.
+                loader: 'url-loader',
+                options: {
+                  limit: 8192,
+                },
+              },
+            ],
+          },
         ],
       },
     },
