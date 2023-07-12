@@ -157,9 +157,9 @@ return require('@embroider/compat').compatBuild(app, Webpack, {
       module: {
         rules: [
           {
-            // When webpack sees an import for a CSS files
+            // When webpack sees an import for a CSS file
             test: /\.css$/i,
-            exclude: /node_modules/,
+            exclude: /node_modules((?!\/rewritten-app).)*$/
             use: [
               {
                 // use the PostCSS loader addon
