@@ -158,8 +158,7 @@ return require('@embroider/compat').compatBuild(app, Webpack, {
         rules: [
           {
             // When webpack sees an import for a CSS file
-            test: /\.css$/i,
-            exclude: /node_modules((?!\/rewritten-app).)*$/
+            test: /(^node_modules\/\.embroider\/rewritten-app\/)(.*\.css)$/i,
             use: [
               {
                 // use the PostCSS loader addon
@@ -174,7 +173,7 @@ return require('@embroider/compat').compatBuild(app, Webpack, {
             ],
           },
           {
-            test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg)$/,
+            test: /(^node_modules\/\.embroider\/rewritten-app\/)(.*\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg))$/,
             use: [
               {
                 // include a image/font standard loader for certain
